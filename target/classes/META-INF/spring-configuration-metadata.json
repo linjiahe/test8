@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.company.project.common.config.FileUploadProperties",
+      "sourceType": "com.company.project.common.config.FileUploadProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.path",
+      "type": "java.lang.String",
+      "sourceType": "com.company.project.common.config.FileUploadProperties"
+    },
+    {
+      "name": "file.url",
+      "type": "java.lang.String",
+      "sourceType": "com.company.project.common.config.FileUploadProperties"
+    }
+  ],
+  "hints": []
+}
