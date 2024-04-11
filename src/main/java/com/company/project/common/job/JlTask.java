@@ -1,4 +1,4 @@
-package com.company.project.common.job.task;
+package com.company.project.common.job;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.company.project.entity.WaKuangJl;
@@ -57,7 +57,7 @@ public class JlTask {
 				throw new Exception("修改失败");
 			}
 		}else{
-			if(!newWalletService.addBalance(userId, jlRecord.getCoin(), jlRecord.getBalance())){
+			if(!newWalletService.addJlTxBalance(userId, jlRecord.getCoin(), jlRecord.getBalance())){
 				throw new Exception("修改失败");
 			}
 			// 将当前奖励记录状态标记为已修改

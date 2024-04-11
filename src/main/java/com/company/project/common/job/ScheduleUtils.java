@@ -1,4 +1,4 @@
-package com.company.project.common.job.utils;
+package com.company.project.common.job;
 
 import com.company.project.common.exception.BusinessException;
 import com.company.project.common.utils.Constant;

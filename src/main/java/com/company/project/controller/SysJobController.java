@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.company.project.common.aop.annotation.LogAnnotation;
 import com.company.project.common.exception.code.BaseResponseCode;
-import com.company.project.common.job.utils.ScheduleJob;
+import com.company.project.common.job.ScheduleJob;
 import com.company.project.common.utils.DataResult;
 import com.company.project.entity.SysJobEntity;
 import com.company.project.service.SysJobService;

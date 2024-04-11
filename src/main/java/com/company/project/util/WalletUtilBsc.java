@@ -1,6 +1,5 @@
 package com.company.project.util;
 
-import com.company.project.common.job.task.wakuang.GuijiUtil;
 import com.company.project.entity.WaKuangWallet;
 import com.company.project.entity.Wallet;
 import com.google.common.collect.ImmutableList;
@@ -27,7 +26,6 @@ import sun.security.provider.SecureRandom;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

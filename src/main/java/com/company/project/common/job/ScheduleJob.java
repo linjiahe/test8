@@ -1,4 +1,4 @@
-package com.company.project.common.job.utils;
+package com.company.project.common.job;
 
 import com.company.project.common.utils.DataResult;
 import com.company.project.common.utils.SpringContextUtils;

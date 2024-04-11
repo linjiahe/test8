@@ -2,7 +2,7 @@ package com.company.project.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.company.project.common.exception.BusinessException;
-import com.company.project.common.job.utils.ScheduleUtils;
+import com.company.project.common.job.ScheduleUtils;
 import com.company.project.common.utils.Constant;
 import com.company.project.entity.SysJobEntity;
 import com.company.project.mapper.SysJobMapper;
