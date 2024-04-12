@@ -32,7 +32,7 @@ public class SysLogController {
 
     @PostMapping("/logs")
     @ApiOperation(value = "分页查询系统操作日志接口")
-//    @LogAnnotation(title = "系统操作日志管理", action = "分页查询系统操作日志")
+    @LogAnnotation(title = "系统操作日志管理", action = "分页查询系统操作日志")
     @RequiresPermissions("sys:log:list")
     public DataResult pageInfo(@RequestBody SysLog vo) {
         Page page = new Page(vo.getPage(), vo.getLimit());

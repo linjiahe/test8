@@ -59,7 +59,7 @@ public class DeptController {
 
     @GetMapping("/dept/{id}")
     @ApiOperation(value = "查询组织详情接口")
-//    @LogAnnotation(title = "机构管理", action = "查询组织详情")
+    @LogAnnotation(title = "机构管理", action = "查询组织详情")
     @RequiresPermissions("sys:dept:detail")
     public DataResult detailInfo(@PathVariable("id") String id) {
         return DataResult.success(deptService.getById(id));
@@ -67,7 +67,7 @@ public class DeptController {
 
     @GetMapping("/dept/tree")
     @ApiOperation(value = "树型组织列表接口")
-//    @LogAnnotation(title = "机构管理", action = "树型组织列表")
+    @LogAnnotation(title = "机构管理", action = "树型组织列表")
     @RequiresPermissions(value = {"sys:user:list","sys:user:update", "sys:user:add", "sys:dept:add", "sys:dept:update"}, logical = Logical.OR)
     public DataResult getTree(@RequestParam(required = false) String deptId) {
         return DataResult.success(deptService.deptTreeList(deptId));
@@ -75,7 +75,7 @@ public class DeptController {
 
     @GetMapping("/depts")
     @ApiOperation(value = "获取机构列表接口")
-//    @LogAnnotation(title = "机构管理", action = "获取所有组织机构")
+    @LogAnnotation(title = "机构管理", action = "获取所有组织机构")
     @RequiresPermissions("sys:dept:list")
     public DataResult getDeptAll() {
         return DataResult.success(deptService.selectAll());    }

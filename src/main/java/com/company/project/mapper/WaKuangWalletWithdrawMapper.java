@@ -2,8 +2,6 @@ package com.company.project.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.company.project.entity.WaKuangWalletWithdraw;
-import com.company.project.entity.WalletWithdraw;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.math.BigDecimal;

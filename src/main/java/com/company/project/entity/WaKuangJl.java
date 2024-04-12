@@ -2,15 +2,18 @@ package com.company.project.entity;
 
 import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
-import com.baomidou.mybatisplus.annotation.*;
-import com.company.project.common.converter.DateConverter;
-import com.company.project.common.converter.WaKuangJlType;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.company.project.vo.req.PageReqVO;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+
 /**
  * @Description 奖励明细 
  * @Author  yzz
@@ -18,6 +21,7 @@ import java.util.Date;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@TableName("wa_kuang_jl")
 public class WaKuangJl extends PageReqVO implements Serializable {
 
 	/**
@@ -50,9 +54,7 @@ public class WaKuangJl extends PageReqVO implements Serializable {
 	 */
 	@ExcelProperty(value = "金额",index = 2)
 	private BigDecimal balance;
-	@ExcelProperty(value = "类型",index = 3,converter = WaKuangJlType.class)
-	@ApiModelProperty("来源类型（0：其他，1：团队奖励，2：购买DOMI<直推奖励>，3：质押奖励 4:游戏加减资产" +
-			" 5:团队质押奖励 6.动态奖励 7.三星节点奖励 8.映射奖励 9.特殊奖励 10.DOMI+IDM质押奖励 11.后台加资产 12.DOMI+BNB质押奖励 13.lp质押奖励)")
+	@ApiModelProperty("来源类型（1：分享收益 2：社区收益 3:全球分红")
 	private Integer sourceType;
 
 	/**
@@ -66,7 +68,6 @@ public class WaKuangJl extends PageReqVO implements Serializable {
 	 * 创建时间
 	 */
 //    @TableField(fill = FieldFill.INSERT)
-	@ExcelProperty(value = "创建时间",index = 4,converter = DateConverter.class)
 	private Date createTime;
 
 	/**
@@ -76,6 +77,7 @@ public class WaKuangJl extends PageReqVO implements Serializable {
 //    @TableField(fill = FieldFill.INSERT_UPDATE)
 	private Date updateTime;
 
-	private int version;
+
+
 
 }

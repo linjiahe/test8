@@ -73,7 +73,7 @@ public class PermissionController {
 
     @GetMapping("/permission/{id}")
     @ApiOperation(value = "查询菜单权限接口")
-//    @LogAnnotation(title = "菜单权限管理", action = "查询菜单权限")
+    @LogAnnotation(title = "菜单权限管理", action = "查询菜单权限")
     @RequiresPermissions("sys:permission:detail")
     public DataResult detailInfo(@PathVariable("id") String id) {
         return DataResult.success(permissionService.getById(id));
@@ -82,7 +82,7 @@ public class PermissionController {
 
     @GetMapping("/permissions")
     @ApiOperation(value = "获取所有菜单权限接口")
-//    @LogAnnotation(title = "菜单权限管理", action = "获取所有菜单权限")
+    @LogAnnotation(title = "菜单权限管理", action = "获取所有菜单权限")
     @RequiresPermissions("sys:permission:list")
     public DataResult getAllMenusPermission() {
         return DataResult.success(permissionService.selectAll());
@@ -90,7 +90,7 @@ public class PermissionController {
 
     @GetMapping("/permission/tree")
     @ApiOperation(value = "获取所有目录菜单树接口")
-//    @LogAnnotation(title = "菜单权限管理", action = "获取所有目录菜单树")
+    @LogAnnotation(title = "菜单权限管理", action = "获取所有目录菜单树")
     @RequiresPermissions(value = {"sys:permission:update", "sys:permission:add"}, logical = Logical.OR)
     public DataResult getAllMenusPermissionTree(@RequestParam(required = false) String permissionId) {
         return DataResult.success(permissionService.selectAllMenuByTree(permissionId));
@@ -98,7 +98,7 @@ public class PermissionController {
 
     @GetMapping("/permission/tree/all")
     @ApiOperation(value = "获取所有目录菜单树接口")
-//    @LogAnnotation(title = "菜单权限管理", action = "获取所有目录菜单树")
+    @LogAnnotation(title = "菜单权限管理", action = "获取所有目录菜单树")
     @RequiresPermissions(value = {"sys:role:update", "sys:role:add"}, logical = Logical.OR)
     public DataResult getAllPermissionTree() {
         return DataResult.success(permissionService.selectAllByTree());

@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.company.project.common.aop.annotation.LogAnnotation;
 import com.company.project.common.exception.code.BaseResponseCode;
-import com.company.project.common.job.ScheduleJob;
+import com.company.project.common.job.utils.ScheduleJob;
 import com.company.project.common.utils.DataResult;
 import com.company.project.entity.SysJobEntity;
 import com.company.project.service.SysJobService;
@@ -46,9 +46,9 @@ public class SysJobController {
     @PostMapping("/add")
     @RequiresPermissions("sysJob:add")
     public DataResult add(@RequestBody SysJobEntity sysJob) {
-//        if (isValidExpression(sysJob.getCronExpression())) {
-//            return DataResult.fail("cron表达式有误");
-//        }
+        if (isValidExpression(sysJob.getCronExpression())) {
+            return DataResult.fail("cron表达式有误");
+        }
         DataResult dataResult = ScheduleJob.judgeBean(sysJob.getBeanName());
         if (BaseResponseCode.SUCCESS.getCode() != dataResult.getCode()) {
             return dataResult;
@@ -72,9 +72,9 @@ public class SysJobController {
     @RequiresPermissions("sysJob:update")
     @LogAnnotation(title = "更新")
     public DataResult update(@RequestBody SysJobEntity sysJob) {
-//        if (isValidExpression(sysJob.getCronExpression())) {
-//            return DataResult.fail("cron表达式有误");
-//        }
+        if (isValidExpression(sysJob.getCronExpression())) {
+            return DataResult.fail("cron表达式有误");
+        }
         DataResult dataResult = ScheduleJob.judgeBean(sysJob.getBeanName());
         if (BaseResponseCode.SUCCESS.getCode() != dataResult.getCode()) {
             return dataResult;

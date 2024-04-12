@@ -61,7 +61,7 @@ public class RoleController {
 
     @GetMapping("/role/{id}")
     @ApiOperation(value = "查询角色详情接口")
-//    @LogAnnotation(title = "角色管理", action = "查询角色详情")
+    @LogAnnotation(title = "角色管理", action = "查询角色详情")
     @RequiresPermissions("sys:role:detail")
     public DataResult detailInfo(@PathVariable("id") String id) {
         return DataResult.success(roleService.detailInfo(id));
@@ -69,7 +69,7 @@ public class RoleController {
 
     @PostMapping("/roles")
     @ApiOperation(value = "分页获取角色信息接口")
-//    @LogAnnotation(title = "角色管理", action = "分页获取角色信息")
+    @LogAnnotation(title = "角色管理", action = "分页获取角色信息")
     @RequiresPermissions("sys:role:list")
     @SuppressWarnings("unchecked")
     public DataResult pageInfo(@RequestBody SysRole vo) {

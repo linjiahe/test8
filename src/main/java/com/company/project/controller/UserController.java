@@ -95,7 +95,7 @@ public class UserController {
 
     @GetMapping("/user/{id}")
     @ApiOperation(value = "查询用户详情接口")
-//    @LogAnnotation(title = "用户管理", action = "查询用户详情")
+    @LogAnnotation(title = "用户管理", action = "查询用户详情")
     @RequiresPermissions("sys:user:detail")
     public DataResult detailInfo(@PathVariable("id") String id) {
         return DataResult.success(userService.getById(id));
@@ -103,7 +103,7 @@ public class UserController {
 
     @GetMapping("/user")
     @ApiOperation(value = "查询用户详情接口")
-//    @LogAnnotation(title = "用户管理", action = "查询用户详情")
+    @LogAnnotation(title = "用户管理", action = "查询用户详情")
     public DataResult youSelfInfo() {
         String userId = httpSessionService.getCurrentUserId();
         return DataResult.success(userService.getById(userId));
@@ -112,7 +112,7 @@ public class UserController {
     @PostMapping("/users")
     @ApiOperation(value = "分页获取用户列表接口")
     @RequiresPermissions("sys:user:list")
-//    @LogAnnotation(title = "用户管理", action = "分页获取用户列表")
+    @LogAnnotation(title = "用户管理", action = "分页获取用户列表")
     public DataResult pageInfo(@RequestBody SysUser vo) {
         return DataResult.success(userService.pageInfo(vo));
     }
@@ -158,7 +158,7 @@ public class UserController {
 
     @GetMapping("/user/roles/{userId}")
     @ApiOperation(value = "赋予角色-获取所有角色接口")
-//    @LogAnnotation(title = "用户管理", action = "赋予角色-获取所有角色接口")
+    @LogAnnotation(title = "用户管理", action = "赋予角色-获取所有角色接口")
     @RequiresPermissions("sys:user:role:detail")
     public DataResult getUserOwnRole(@PathVariable("userId") String userId) {
         DataResult result = DataResult.success();

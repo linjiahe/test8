@@ -61,8 +61,7 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
         registry.addMapping("/**")
                 .allowedHeaders("*")
                 .allowedMethods("POST", "GET", "PUT", "DELETE")
-                .allowedOrigins("*")
-                .exposedHeaders("Content-Disposition");
+                .allowedOrigins("*");
     }
 
 

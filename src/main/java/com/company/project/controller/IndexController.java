@@ -142,39 +142,4 @@ public class IndexController {
     public String sysFiles() {
         return "sysfiles/list";
     }
-
-    @GetMapping("/wallet")
-    public String walletList() {
-        return "wallet/wallet_list";
-    }
-
-    @GetMapping("/zichang")
-    public String zichangList() {
-        return "wallet/wallet_zichang";
-    }
-
-    @GetMapping("/walletRecharge")
-    public String walletRechargeList() {
-        return "wallet/wallet_recharge_list";
-    }
-
-    @GetMapping("/walletWithdraw")
-    public String walletWithdrawList() {
-        return "wallet/wallet_withdraw_list";
-    }
-
-    @GetMapping("/jlWithdraw")
-    public String jlWithdrawList() {
-        return "wallet/jl_withdraw_list.html";
-    }
-
-    @GetMapping("/gonghui-jlrecord")
-    public String gonghuiJlrecord() {
-        return "wallet/gonghui_jlrecord";
-    }
-
-    @GetMapping("/gonghui-jlrecord-update")
-    public String gonghuiJlrecordUpdate() {
-        return "wallet/gonghui_jlrecord_update";
-    }
 }
